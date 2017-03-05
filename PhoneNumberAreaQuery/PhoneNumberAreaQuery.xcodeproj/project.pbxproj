@@ -26,9 +26,11 @@
 /* Begin PBXFileReference section */
 		4703DFF61E6A301000843437 /* PhoneNumberAreaQuery */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PhoneNumberAreaQuery; sourceTree = BUILT_PRODUCTS_DIR; };
 		4703DFF91E6A301000843437 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		4703E0011E6A333700843437 /* phone_number_area.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = phone_number_area.txt; sourceTree = "<group>"; };
 		4703E0061E6A338900843437 /* PhoneNumberAreaQuery.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PhoneNumberAreaQuery.c; sourceTree = "<group>"; };
 		4703E0071E6A338900843437 /* PhoneNumberAreaQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNumberAreaQuery.h; sourceTree = "<group>"; };
+		4787AAEC1E6BDD6D00661A75 /* phone_number_area_sorted.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = phone_number_area_sorted.txt; sourceTree = "<group>"; };
+		4787AAED1E6BDE2500661A75 /* phone_number_area.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = phone_number_area.txt; sourceTree = "<group>"; };
+		4787AAEE1E6BEAD100661A75 /* phone_number_area_binary */ = {isa = PBXFileReference; lastKnownFileType = file; path = phone_number_area_binary; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +73,9 @@
 		4703E0001E6A333700843437 /* resource */ = {
 			isa = PBXGroup;
 			children = (
-				4703E0011E6A333700843437 /* phone_number_area.txt */,
+				4787AAEC1E6BDD6D00661A75 /* phone_number_area_sorted.txt */,
+				4787AAED1E6BDE2500661A75 /* phone_number_area.txt */,
+				4787AAEE1E6BEAD100661A75 /* phone_number_area_binary */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -273,6 +277,7 @@
 				4703DFFF1E6A301000843437 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
