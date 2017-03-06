@@ -138,6 +138,9 @@ PhoneArea searchByPhoneNumber(const char *searchNumber, const char *binaryFilePa
     }
     
     FILE *rfile = fopen(binaryFilePath, "rb");
+    if (rfile == NULL) {
+        return phoneArea;
+    }
     
     int head = 0;
     int tail = NUMBER;
