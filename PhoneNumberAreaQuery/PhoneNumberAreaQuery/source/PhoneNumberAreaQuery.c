@@ -142,13 +142,12 @@ PhoneArea searchByPhoneNumber(const char *searchNumber, const char *binaryFilePa
     int head = 0;
     int tail = NUMBER;
     while (head <= tail) {
-
         int middle = (head + tail) * 0.5;
         fseek(rfile, sizeof(PhoneArea) * middle, SEEK_SET);
         fread(&phoneArea, sizeof(PhoneArea), 1, rfile);
         
         if (strcmp(number, phoneArea.phoneNumber) == 0) {
-            return phoneArea;
+            break;
             
         } else if (strcmp(number, phoneArea.phoneNumber) > 0) {
             head = middle + 1;
