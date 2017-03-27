@@ -9,6 +9,8 @@
 #include "PhoneNumberAreaQuery.h"
 
 #define NUMBER 324110
+
+// 待查询的手机号码的最短位数
 #define PHONE_BASE_LENGTH 7
 
 // 删掉'\0'
@@ -41,6 +43,7 @@ void sortPhoneNumberAreaData(const char *sourcePath, const char *targetPath) {
     
     int i = 0;
     while (!feof(rfile)) {
+
         char phoneAreaString[256] = {0};
         fgets(phoneAreaString, 256, rfile);
         // 删除换行
@@ -89,6 +92,7 @@ void writePhoneNumberAreaDataToBinaryFile(const char *sourcePath, const char *ta
     
     int i = 0;
     while (!feof(rfile)) {
+
         char phoneAreaString[256] = {0};
         fgets(phoneAreaString, 256, rfile);
         
@@ -145,6 +149,7 @@ PhoneArea searchByPhoneNumber(const char *searchNumber, const char *binaryFilePa
     int head = 0;
     int tail = NUMBER;
     while (head <= tail) {
+
         int middle = (head + tail) * 0.5;
         fseek(rfile, sizeof(PhoneArea) * middle, SEEK_SET);
         fread(&phoneArea, sizeof(PhoneArea), 1, rfile);
